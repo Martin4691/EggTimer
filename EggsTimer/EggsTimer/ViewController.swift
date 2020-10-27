@@ -11,15 +11,10 @@ class ViewController: UIViewController {
   
   let softTime: Int = 300
   let hardTime: Int = 720
-  
   var secondsLeft: Int = 30
-  
   var timer: Timer = Timer()
-  
   var secondsRest: Float = 0
-  
   var player: AVAudioPlayer!
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -32,7 +27,6 @@ class ViewController: UIViewController {
   }
 
   @IBOutlet weak var titleLabel: UILabel!
-  
   @IBOutlet weak var progressBar: UIProgressView!
   
   @IBAction func hardnessSelected(_ sender: UIButton) {
