@@ -9,7 +9,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
   
-  let softTime: Int = 300
+  let softTime: Int = 3
   let hardTime: Int = 720
   var secondsLeft: Int = 30
   var timer: Timer = Timer()
@@ -28,6 +28,12 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var progressBar: UIProgressView!
+  @IBAction func stopButton(_ sender: Any) {
+    print("STOP!")
+    titleLabel.text = "Manda Huevos!"
+    timer.invalidate()
+    player.stop()
+  }
   
   @IBAction func hardnessSelected(_ sender: UIButton) {
     timer.invalidate()
