@@ -9,7 +9,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
   
-  let softTime: Int = 3
+  let softTime: Int = 300
   let hardTime: Int = 720
   var secondsLeft: Int = 30
   var timer: Timer = Timer()
