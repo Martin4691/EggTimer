@@ -30,9 +30,13 @@ class ViewController: UIViewController {
   @IBOutlet weak var progressBar: UIProgressView!
   @IBAction func stopButton(_ sender: Any) {
     print("STOP!")
-    titleLabel.text = "Manda Huevos!"
+    titleLabel.text = "Ha finalizado!"
     timer.invalidate()
-    player.stop()
+    if player == nil {
+        print("Player is nil! F*CK")
+    } else {
+        player.stop()
+    }
   }
   
   @IBAction func hardnessSelected(_ sender: UIButton) {
@@ -65,7 +69,7 @@ class ViewController: UIViewController {
       print("percentageProgress: \(progressBar.progress)")
     }
     if secondsLeft <= 0 {
-      titleLabel.text = "Cocción Finalizada!"
+      titleLabel.text = "Ha pulsado STOP!"
       timer.invalidate()
       playSound(soundName: "alarm")
     }
